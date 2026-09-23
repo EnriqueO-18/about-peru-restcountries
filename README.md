@@ -29,6 +29,7 @@ Aplicacion web desarrollada con Vue 3 y Vite que consume la API publica de RESTC
 
 Organizacion domain-driven, separando los sub-dominios public (elementos generales de la interfaz) y countries (elementos relacionados a la informacion de paises):
 
+```
 src/
 ├── public/
 │   └── components/
@@ -43,6 +44,7 @@ src/
 │       └── about-peru.view.vue
 ├── App.vue
 └── main.js
+```
 
 ## Convenciones de nomenclatura
 
@@ -53,8 +55,10 @@ src/
 
 ## Instalacion y ejecucion
 
+```
 npm install
 npm run dev
+```
 
 La aplicacion queda disponible en http://localhost:5173/
 
@@ -62,7 +66,9 @@ La aplicacion queda disponible en http://localhost:5173/
 
 Este proyecto requiere una API key para consumir el endpoint de paises. Crea un archivo .env en la raiz con:
 
+```
 VITE_API_KEY=tu_api_key_aqui
+```
 
 ## Nota sobre la version de la API
 
