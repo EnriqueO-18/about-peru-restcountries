@@ -11,13 +11,15 @@
 .pv-toolbar {
   display: flex;
   align-items: center;
-  padding: 1rem 1.5rem;
-  background: #1e293b;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
   color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 .toolbar-title {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 </style>

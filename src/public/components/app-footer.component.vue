@@ -11,11 +11,10 @@
 <style scoped>
 .app-footer {
   text-align: center;
-  padding: 16px;
-  background: #f8f9fa;
-  border-top: 1px solid #e0e0e0;
+  padding: 1.25rem;
+  background: #1e293b;
+  color: #cbd5e1;
   font-size: 0.85rem;
-  color: #555;
 }
 .app-footer p {
   margin: 4px 0;
