@@ -16,24 +16,29 @@ const country = ref(null)
 const loading = ref(true)
 const error = ref(null)
 
+// Nota: la API v5 de RESTCountries ya no incluye el campo coatOfArms.
+// Se utiliza una imagen pública fija del escudo de Perú como alternativa.
+const PERU_COAT_OF_ARMS = 'https://commons.wikimedia.org/wiki/Special:FilePath/Escudo_nacional_del_Per%C3%BA.svg'
+
 async function fetchPeruData() {
   try {
     const { data } = await countryService.getCountryByName('peru')
-    const peru = data[0]
+    const peru = data.data.objects[0]
     country.value = {
-      name: peru.name.common,
-      officialName: peru.name.official,
-      currency: Object.values(peru.currencies)[0].name,
-      capital: peru.capital[0],
+      name: peru.names.common,
+      officialName: peru.names.official,
+      currency: peru.currencies[0].name,
+      capital: peru.capitals[0].name,
       region: peru.region,
       subregion: peru.subregion,
-      languages: Object.values(peru.languages).join(', '),
-      area: peru.area.toLocaleString(),
+      languages: peru.languages.map(l => l.name).join(', '),
+      area: peru.area.kilometers.toLocaleString(),
       population: peru.population.toLocaleString(),
-      flag: peru.flags.png,
-      coatOfArms: peru.coatOfArms.png
+      flag: peru.flag.url_png,
+      coatOfArms: PERU_COAT_OF_ARMS
     }
   } catch (e) {
+    console.error('Error real:', e)
     error.value = 'Could not load country data.'
   } finally {
     loading.value = false
