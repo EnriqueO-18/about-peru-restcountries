@@ -36,10 +36,13 @@ defineProps({
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 1.5rem;
+  box-sizing: border-box;
 }
 .country-card {
   max-width: 500px;
+  width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .card-title {
   margin: 0.5rem 0 0;
@@ -56,7 +59,9 @@ defineProps({
   padding: 16px;
 }
 .flag-img {
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
   border: 1px solid #ddd;
 }
 .country-details {
@@ -64,17 +69,22 @@ defineProps({
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  width: 100%;
 }
 .coat-img {
-  width: 100px;
+  max-width: 100px;
+  width: 100%;
+  height: auto;
 }
 ul {
   list-style: none;
   padding: 0;
   width: 100%;
+  box-sizing: border-box;
 }
 li {
   padding: 6px 0;
   border-bottom: 1px solid #eee;
+  word-wrap: break-word;
 }
 </style>

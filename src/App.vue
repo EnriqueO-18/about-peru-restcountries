@@ -19,9 +19,12 @@ import AboutPeru from './countries/views/about-peru.view.vue'
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 .app-content {
   flex: 1;
   padding: 24px;
+  box-sizing: border-box;
+  width: 100%;
 }
 </style>
